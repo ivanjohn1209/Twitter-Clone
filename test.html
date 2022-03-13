@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style> 
+    .twitter-bg {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 90vh;
+      width: 100%;
+    }
+    
+    .login-container {
+      padding: 16px !important;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      height: 90vh;
+    }
+    
+    .logo-svg-blue {
+      padding-bottom: 12px;
+      height: 6rem;
+      color: #1d9bf0;
+      align-self: flex-start;
+      vertical-align: text-bottom;
+      position: relative;
+      max-width: 100%;
+      display: inline-block;
+      fill: currentcolor;
+    }
+    
+    .css-1dbjc4n {
+      -ms-flex-align: stretch;
+      -ms-flex-direction: column;
+      -ms-flex-negative: 0;
+      -ms-flex-preferred-size: auto;
+      -webkit-align-items: stretch;
+      -webkit-box-align: stretch;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-basis: auto;
+      -webkit-flex-direction: column;
+      -webkit-flex-shrink: 0;
+      align-items: stretch;
+      border: 0 solid #000;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-basis: auto;
+      flex-direction: column;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      min-height: 0px;
+      min-width: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      position: relative;
+      z-index: 0;
+    }
+    
+    .css-901oao {
+      border: 0 solid #000;
+      box-sizing: border-box;
+      color: rgba(0,0,0,1);
+      display: inline;
+      font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    
+    .login-title {
+      font-family: TwitterChirpExtendedHeavy,Verdana,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      margin-bottom: 48px;
+      margin-top: 48px;
+      font-size: 64px;
+      font-weight: 700;
+    }
+    
+    .login-subtitle {
+      font-family: TwitterChirpExtendedHeavy,Verdana,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size: 31px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+    
+    .login-btn-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .btn-auth {
+      min-height: 36px;
+      min-width: 36px;
+      width: 400px;
+      height: 40px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 9999px !important;
+      font-size: 15px;
+      font-weight: 700 !important;
+      margin-bottom: 20px !important;
+    }
+    
+    .signup-btn {
+      background-color: #1d9bf0;
+      color: #fff;
+    }
+    
+    .login-btn {
+      background-color: #fff;
+      color: #1d9bf0;
+      border: 1px solid #1d9bf0 !important;
+    }
+    
+    .bottom-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      padding-top: 12px;
+    }
+    
+    .bottom-link a {
+      color: #536471;
+      padding-right: 16px;
+      line-height: 16px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 400;
+      overflow-wrap: break-word;
+      margin-bottom: 4px;
+      margin-top: 4px;
+    }
+    
+    .bg-logo {
+      max-height: 380px;
+      height: 50%;
+      color: #fff;
+      -webkit-box-pack: center;
+      justify-content: center;
+      fill: currentcolor;
+      padding: 32px;
+    }
+    
+    .bg-logo-container {
+      position: absolute;
+      z-index: 12;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @media only screen and (max-width:990px) {
+      .login-container {
+        height: 40vh;
+        padding: 10px;
+      }
+    
+      .twitter-bg {
+        height: 50vh;
+      }
+    
+      .login-btn-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .btn-auth {
+        width: 270px;
+        margin: 0 10px;
+      }
+    
+      .login-title {
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0 40px;
+      }
+    
+      .login-subtitle {
+        font-size: 25px;
+        padding: 0 40px;
+      }
+    
+      .logo-svg {
+        padding: 0 40px;
+      }
+    }
+    
+    @media only screen and (min-device-width :320px) and (max-device-width :480px) {
+      .login-container {
+        height: auto;
+        padding: 10px;
+        display: block;
+      }
+    
+      .twitter-bg {
+        height: 50vh;
+      }
+    
+      .login-btn-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .btn-auth {
+        width: 80%;
+        margin: 0 10px;
+      }
+    
+      .logo-svg {
+        padding: 0 40px;
+      }
+    
+      .login-title {
+        font-size: 43px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0 40px;
+      }
+    
+      .login-subtitle {
+        font-size: 25px;
+        padding: 0 40px;
+      }
+    }
+  </style>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,700,500|Material+Icons|Material+Icons+Outlined&display=swap"
+    rel="stylesheet">
+    <title>Twitter</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-6 col-md-push-6" style="padding: 0">
+      <div class="css-1dbjc4n login-container">
+          <div class="logo-svg">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="logo-svg-blue"><g><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></g></svg>
+          </div>
+          <div class="login-title">
+              <span class="css-901oao" style="font: inherit;">Happening now</span>
+          </div>
+          <div class="login-subtitle">
+              <span class="css-901oao" style="font: inherit;">Join Twitter today.
+              </span>
+          </div>
+          <div class="login-btn-container">
+            <button class="btn btn-auth signup-btn">Sign up</button>
+            <button class="btn btn-auth login-btn">Login</button>
+          </div>
+      </div>
+  </div>
+    <div class="col-md-6 col-md-pull-6" style="padding: 0">
+        <div class="twitter-bg" style="background-image: url(&quot;https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png&quot;);"></div>  
+        <div class="bg-logo-container">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="bg-logo"><g><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></g></svg>
+        </div>
+        </div>
+    <div class="col-md-12">
+      <div class="bottom-link">
+        <a href="#">About</a>
+        <a href="#">Help Center</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Ads info</a>
+        <a href="#">Blog</a>
+        <a href="#">Status</a>
+        <a href="#">Careers</a>
+        <a href="#">Brand Resources</a>
+        <a href="#">Advertising</a>
+        <a href="#">Marketing</a>
+        <a href="#">Twitter for Business</a>
+        <a href="#">Developers</a>
+        <a href="#">Directory</a>
+        <a href="#">Settings</a>
+        <a href="#">© 2022 Twitter, Inc.</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+
